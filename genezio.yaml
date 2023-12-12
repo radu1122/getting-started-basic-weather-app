@@ -1,0 +1,13 @@
+name: getting-started-basic-weather-app
+region: eu-central-1
+cloudProvider: genezio
+frontend:
+    path: client/dist
+    subdomain: darkslategray-here-wolf
+scripts:
+    preBackendDeploy: npm install
+    preFrontendDeploy: npm install && npm run build
+workspace:
+    backend: server
+    frontend: client
+language: ts
